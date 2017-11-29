@@ -1,0 +1,80 @@
+{
+    "manifestVersion": 1,
+    "version": "0.5.0",
+    "id": "SSDTBuildDeploy",
+    "name": "Build and Deploy SSDT Projects",
+    "description": "Build adn Deploy SSDt-based database projectsusingthe Microsoft.Data.Tools.MSBuild NuGet package.",
+    "categories": [
+        "Build and release"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "publisher": "sabinio",
+        "icons": {
+            "default": "images/packageDefaultIcon.png"
+         },
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+    "contributions": [
+        {
+            "id": "build-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Build"
+            }
+        },
+        {
+            "id": "deploy-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Deploy"
+            }
+        }
+    ],
+    "scopes": [],
+    "contributionTypes": [],
+     "files": [
+            {
+                "path": "Build/Build.png", "addressable": true
+            },
+            {
+                "path": "Build/InvokeMsBuildSSDT.ps1", "addressable": true
+            },
+            {
+                "path": "Build/StartBuild.ps1", "addressable": true
+            },
+            {
+                "path": "Build/InstallMicrosoftDataToolsMSBuild.ps1", "addressable": true
+            },
+            {
+                "path": "Build/task.json", "addressable": true
+            },
+            {
+                "path": "Deploy/Deploy.png", "addressable": true
+            },
+            {
+                "path": "Deploy/PublishDatabaseDeployment.ps1", "addressable": true
+            },
+            {
+                "path": "Deploy/task.json", "addressable": true
+            },
+            {
+                "path": "images/packageDefaultIcon.png", "addressable": true
+            },
+            {
+                "path": "vss-extension.json", "addressable": true
+            }
+        ]
+}
