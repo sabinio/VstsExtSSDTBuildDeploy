@@ -1,0 +1,27 @@
+{
+    "id": "cb1fba42-1787-45fe-97d7-f7f8e1289876",
+    "name": "BuildSSDTProjects",
+    "friendlyName": "Build SSDT Database Projects",
+    "description": "Installs Microsoft.Data.Tools.MSBuild and builds a SSDT project.",
+    "helpMarkDown": "[More Information](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt)",
+    "category": "Package",
+    "author": "Richie Lee",
+    "version": {
+        "Major": 0,
+        "Minor": 5,
+        "Patch": 0
+    },
+    "demands": [
+        "Cmd"
+    ],
+    "minimumAgentVersion": "1.83.0",
+    "groups": [],
+    "instanceNameFormat": "Build SSDT Project $(solution)",
+    "execution": {
+        "PowerShell": {
+            "target": "StartBuild.ps1",
+            "argumentFormat": "",
+            "workingDirectory": ""
+        }
+    }
+}

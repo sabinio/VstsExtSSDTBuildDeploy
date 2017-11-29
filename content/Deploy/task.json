@@ -1,0 +1,27 @@
+{
+    "id": "9a9ba28b-18f6-4e83-967a-1a6208416d70",
+    "name": "BuildSSDTProjects",
+    "friendlyName": "Deploy a DACPAC using ",
+    "description": "Installs Microsoft.Data.Tools.MSBuild and deploys a DACPAC using a publish.xml",
+    "helpMarkDown": "[More Information](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt)",
+    "category": "Package",
+    "author": "Richie Lee",
+    "version": {
+        "Major": 0,
+        "Minor": 5,
+        "Patch": 0
+    },
+    "demands": [
+        "Cmd"
+    ],
+    "minimumAgentVersion": "1.83.0",
+    "groups": [],
+    "instanceNameFormat": "Deploy DACPAC $(solution)",
+       "execution": {
+        "PowerShell": {
+            "target": "StartDeploy.ps1",
+            "argumentFormat": "",
+            "workingDirectory": ""
+        }
+    }
+}
