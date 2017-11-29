@@ -3,7 +3,7 @@
     "version": "0.5.0",
     "id": "SSDTBuildDeploy",
     "name": "Build and Deploy SSDT Projects",
-    "description": "Build and Deploy SSDT-based database project susing the Microsoft.Data.Tools.MSBuild NuGet package.",
+    "description": "Build and Deploy SSDT-based database project using the Microsoft.Data.Tools.MSBuild NuGet package.",
     "categories": [
         "Build and release"
     ],
