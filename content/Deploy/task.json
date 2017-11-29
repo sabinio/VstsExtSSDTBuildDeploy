@@ -1,9 +1,9 @@
 {
-    "id": "5242f34a-ef9d-4571-9e3c-a5c2deccc13e",
-    "name": "AlterPsModuleVersion",
-    "friendlyName": "Alter PowerShell ModuleVersion Number",
-    "description": "Alter ModuleVersion Element stored in a Windows PowerShell data file (.psd1).",
-    "helpMarkDown": "[More Information](https://msdn.microsoft.com/en-us/library/dd878337(v=vs.85).aspx)",
+    "id": "9a9ba28b-18f6-4e83-967a-1a6208416d70",
+    "name": "BuildSSDTProjects",
+    "friendlyName": "Deploy a DACPAC using ",
+    "description": "Installs Microsoft.Data.Tools.MSBuild and deploys a DACPAC using a publish.xml",
+    "helpMarkDown": "[More Information](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt)",
     "category": "Package",
     "author": "Richie Lee",
     "version": {
@@ -16,28 +16,10 @@
     ],
     "minimumAgentVersion": "1.83.0",
     "groups": [],
-    "instanceNameFormat": "Alter ModuleVersion $(solution)",
-    "inputs": [
-        {
-            "name": "buildNumber",
-            "type": "string",
-            "label": "New ModuleVersion Number",
-            "defaultValue": "",
-            "helpMarkDown": "Update the ModuleVersion Number element to this value in the psd1 file.",
-            "required": true
-        },
-        {
-            "name": "file",
-            "type": "filePath",
-            "label": "psd1 File Path",
-            "defaultValue": "",
-            "helpMarkDown": "Filepath to the Windows PowerShell data file (.psd1).",
-            "required": true
-        }        
-    ],
-    "execution": {
+    "instanceNameFormat": "Deploy DACPAC $(solution)",
+       "execution": {
         "PowerShell": {
-            "target": "PsAlterModuleVersion.ps1",
+            "target": "StartDeploy.ps1",
             "argumentFormat": "",
             "workingDirectory": ""
         }
