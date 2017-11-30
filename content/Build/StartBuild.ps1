@@ -4,7 +4,6 @@
 # .".\InvokeMsBuildSSDT.ps1"
 # Install-MicrosoftDataToolsMSBuild -WorkingFolder $PSScriptRoot
 
-Install-MicrosoftDataToolsMSBuild -WorkingFolder $PSScriptRoot
 
 try {
     Find-Module -Name "PoshSSDTBuildDeploy"
@@ -16,5 +15,6 @@ catch {
 }
 finally {
     Import-Module PoshSSDTBuildDeploy -Force
-    Write-Host " PoshSSDTBuildDeploy Imported"
+    Write-Host "PoshSSDTBuildDeploy Imported"
+    Install-MicrosoftDataToolsMSBuild -WorkingFolder $PSScriptRoot
 }
