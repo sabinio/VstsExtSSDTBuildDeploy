@@ -6,6 +6,9 @@ function Invoke-MsBuildSSDT {
             Write-Error "No MSBuild installed. Instal Build Tools using 'Install-VsBuildTools2017' and try again!"
             Throw
         }
+        Write-Host "Finding current directory..."
+        Write-Host $PSScriptRoot
+        Write-Host "End of finding directory..."
     $arg1 = "/p:tv=15.0"
     $arg2 = "/p:SSDTPath=$DataToolsFilePath"
     $arg3 = "/p:SQLDBExtensionsRefPath=$DataToolsFilePath"
