@@ -17,7 +17,17 @@
     "minimumAgentVersion": "1.83.0",
     "groups": [],
     "instanceNameFormat": "Deploy DACPAC $(solution)",
-       "execution": {
+    "inputs": [
+        {
+            "name": "sqlProjFile",
+            "type": "filePath",
+            "label": "Database Project File Path",
+            "defaultValue": "",
+            "helpMarkDown": "Filepath to the Database Project file (.sqlproj).",
+            "required": true
+        }
+    ],
+    "execution": {
         "PowerShell": {
             "target": "StartDeploy.ps1",
             "argumentFormat": "",

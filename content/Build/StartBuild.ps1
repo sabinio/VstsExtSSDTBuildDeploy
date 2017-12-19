@@ -10,3 +10,4 @@ catch {
 Import-Module PoshSSDTBuildDeploy -Force
 Write-Host "PoshSSDTBuildDeploy Imported"
 Install-MicrosoftDataToolsMSBuild -WorkingFolder $PSScriptRoot
+Invoke-MsBuildSSDT -DatabaseProjectFilePath $sqlProjFile

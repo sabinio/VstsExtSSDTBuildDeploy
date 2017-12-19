@@ -1,5 +1,5 @@
 function Invoke-MsBuildSSDT {
-    param ( [string] $DatabaseSolutionFilePath)
+    param ( [string] $DatabaseProjectFilePath)
         
         $msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe"
         if (-not (Test-Path $msbuild)) {
@@ -11,6 +11,6 @@ function Invoke-MsBuildSSDT {
     $arg3 = "/p:SQLDBExtensionsRefPath=$DataToolsFilePath"
     $arg4 = "/p:Configuration=Debug"
 
-    Write-Host $msbuild $DatabaseSolutionFilePath $arg1 $arg2 $arg3 $arg4 -ForegroundColor White -BackgroundColor DarkGreen
-    & $msbuild $DatabaseSolutionFilePath $arg1 $arg2 $arg3 $arg4
+    Write-Host $msbuild $DatabaseProjectFilePath $arg1 $arg2 $arg3 $arg4 -ForegroundColor White -BackgroundColor DarkGreen
+    & $msbuild $DatabaseProjectFilePath $arg1 $arg2 $arg3 $arg4
 }
