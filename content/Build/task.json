@@ -17,6 +17,16 @@
     "minimumAgentVersion": "1.83.0",
     "groups": [],
     "instanceNameFormat": "Build SSDT Project $(solution)",
+    "inputs": [
+        {
+            "name": "sqlProjFile",
+            "type": "filePath",
+            "label": "Database Project File Path",
+            "defaultValue": "",
+            "helpMarkDown": "Filepath to the Database Project file (.sqlproj).",
+            "required": true
+        }
+    ],
     "execution": {
         "PowerShell": {
             "target": "StartBuild.ps1",
